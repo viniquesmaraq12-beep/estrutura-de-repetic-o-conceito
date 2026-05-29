@@ -1,0 +1,29 @@
+programa {
+  funcao inicio() {
+    inteiro opcaoVoto
+    inteiro candidato1 = 0, candidato2 = 0, candidato3 = 0, candidato4 = 0
+    inteiro votosNulos = 0, votosBrancos = 0
+
+    escreva("Digite os votos (0 para finalizar):\n")
+    leia(opcaoVoto)
+
+    enquanto(opcaoVoto != 0) {
+      escolha(opcaoVoto) {
+        caso 1: candidato1 = candidato1 + 1
+        caso 2: candidato2 = candidato2 + 1
+        caso 3: candidato3 = candidato3 + 1
+        caso 4: candidato4 = candidato4 + 1
+        caso 5: votosNulos = votosNulos + 1
+        caso 6: votosBrancos = votosBrancos + 1
+      }
+      leia(opcaoVoto)
+    }
+
+    escreva("\nTotal de votos do candidato 1: ", candidato1)
+    escreva("\nTotal de votos do candidato 2: ", candidato2)
+    escreva("\nTotal de votos do candidato 3: ", candidato3)
+    escreva("\nTotal de votos do candidato 4: ", candidato4)
+    escreva("\nQuantidade de votos nulos: ", votosNulos)
+    escreva("\nQuantidade de votos em branco: ", votosBrancos)
+  }
+}
