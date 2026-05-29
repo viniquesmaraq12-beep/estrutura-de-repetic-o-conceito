@@ -1,0 +1,34 @@
+programa {
+  funcao inicio() {
+    real renda
+    inteiro quantidadeFilhos
+    real totalRenda = 0
+    real totalFilhos = 0
+    real maiorRenda = 0
+    inteiro salarioBaixo = 0
+
+    para(inteiro contador = 1; contador <= 5; contador++) {
+      escreva("\nInforme a renda: ")
+      leia(renda)
+
+      escreva("Quantidade de filhos: ")
+      leia(quantidadeFilhos)
+
+      totalRenda = totalRenda + renda
+      totalFilhos = totalFilhos + quantidadeFilhos
+
+      se(renda > maiorRenda) {
+        maiorRenda = renda
+      }
+
+      se(renda <= 100) {
+        salarioBaixo = salarioBaixo + 1
+      }
+    }
+
+    escreva("\nMédia das rendas: R$", totalRenda / 5)
+    escreva("\nMédia da quantidade de filhos: ", totalFilhos / 5)
+    escreva("\nMaior renda informada: R$", maiorRenda)
+    escreva("\nPercentual com renda até R$100,00: ", (salarioBaixo * 100) / 5, "%")
+  }
+}
